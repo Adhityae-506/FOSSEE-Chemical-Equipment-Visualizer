@@ -1,4 +1,3 @@
-// src/pages/History.jsx
 import React, { useEffect, useState } from "react";
 import { getHistory } from "../api/api";
 

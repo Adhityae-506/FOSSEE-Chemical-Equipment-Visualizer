@@ -5,7 +5,7 @@ from rest_framework import status
 from rest_framework.authtoken.models import Token
 
 class LoginView(APIView):
-    permission_classes = []  # allow any
+    permission_classes = [] 
 
     def post(self, request):
         username = request.data.get('username')

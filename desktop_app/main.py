@@ -1,4 +1,3 @@
-# desktop_app/main.py
 import sys
 import json
 
@@ -41,33 +40,31 @@ class MainWindow(QMainWindow):
 
         self.current_csv_path = None
 
-        # Root widget
+        
         root = QWidget()
         root_layout = QVBoxLayout(root)
 
-        # Tabs: Upload/Summary + History + Report
+        
         self.tabs = QTabWidget()
         root_layout.addWidget(self.tabs)
 
-        # Build tabs
+        
         self._build_upload_tab()
         self._build_history_tab()
         self._build_report_tab()
 
         self.setCentralWidget(root)
 
-        # Load existing data (if any)
+        
         self.refresh_summary()
         self.refresh_history()
 
-    # ------------------------------------------------------------------
-    # Upload / Summary tab
-    # ------------------------------------------------------------------
+  
     def _build_upload_tab(self):
         tab = QWidget()
         layout = QVBoxLayout(tab)
 
-        # --- Upload controls ---
+        
         upload_row = QHBoxLayout()
         self.file_label = QLabel("No file selected")
         self.file_label.setStyleSheet("font-weight: 500;")
@@ -87,7 +84,7 @@ class MainWindow(QMainWindow):
         self.upload_status_label = QLabel("")
         layout.addWidget(self.upload_status_label)
 
-        # --- Summary fields ---
+        
         summary_group = QWidget()
         form = QFormLayout(summary_group)
 
@@ -103,7 +100,7 @@ class MainWindow(QMainWindow):
 
         layout.addWidget(summary_group)
 
-        # --- Charts: bar + pie ---
+        
         charts_row = QHBoxLayout()
 
         self.bar_canvas = MplCanvas()
@@ -149,7 +146,7 @@ class MainWindow(QMainWindow):
 
         self.upload_status_label.setText("Upload successful ✅")
 
-        # After successful upload, refresh summary + history
+        
         self.refresh_summary()
         self.refresh_history()
 
@@ -157,7 +154,7 @@ class MainWindow(QMainWindow):
         try:
             summary = api_client.get_latest_summary()
         except api_client.ApiError as e:
-            # No dataset or other error
+            
             self.lbl_total.setText("-")
             self.lbl_flow.setText("-")
             self.lbl_pressure.setText("-")
@@ -168,18 +165,18 @@ class MainWindow(QMainWindow):
             self.pie_canvas.ax.clear()
             self.pie_canvas.draw()
 
-            # Don't spam errors if there is simply no dataset
+            
             if "no dataset" not in str(e).lower():
                 QMessageBox.warning(self, "Summary", f"Unable to fetch summary:\n{e}")
             return
 
-        # Update labels – uses your backend keys
+        
         self.lbl_total.setText(str(summary.get("total_equipment", "-")))
         self.lbl_flow.setText(str(summary.get("average_flowrate", "-")))
         self.lbl_pressure.setText(str(summary.get("average_pressure", "-")))
         self.lbl_temp.setText(str(summary.get("average_temperature", "-")))
 
-        # Update charts
+        
         self._update_bar_chart(summary)
         self._update_pie_chart(summary)
 
@@ -218,9 +215,7 @@ class MainWindow(QMainWindow):
         self.pie_canvas.fig.tight_layout()
         self.pie_canvas.draw()
 
-    # ------------------------------------------------------------------
-    # History tab
-    # ------------------------------------------------------------------
+    
     def _build_history_tab(self):
         tab = QWidget()
         layout = QVBoxLayout(tab)
@@ -243,7 +238,7 @@ class MainWindow(QMainWindow):
             self.history_text.setPlainText(f"Unable to fetch history:\n{e}")
             return
 
-        # Pretty JSON view in text box
+        
         self.history_text.clear()
         for item in items:
             self.history_text.append(f"File: {item.get('file_name')}")
@@ -253,9 +248,7 @@ class MainWindow(QMainWindow):
             )
             self.history_text.append("\n" + "-" * 60 + "\n")
 
-    # ------------------------------------------------------------------
-    # Report tab
-    # ------------------------------------------------------------------
+    
     def _build_report_tab(self):
         tab = QWidget()
         layout = QVBoxLayout(tab)
@@ -279,7 +272,7 @@ class MainWindow(QMainWindow):
         self.tabs.addTab(tab, "Report")
 
     def download_report_clicked(self):
-        # Ask where to save the PDF
+        
         path, _ = QFileDialog.getSaveFileName(
             self,
             "Save Report PDF",

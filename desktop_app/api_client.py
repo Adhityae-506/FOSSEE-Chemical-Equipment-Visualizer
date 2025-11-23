@@ -1,7 +1,7 @@
-# desktop_app/api_client.py
+
 import requests
 
-# Same backend you use for React
+
 API_BASE = "https://fossee-chemical-equipment-visualizer.onrender.com"
 
 class ApiError(Exception):
@@ -12,7 +12,7 @@ def _handle_response(r: requests.Response):
     try:
         r.raise_for_status()
     except requests.RequestException as e:
-        # Try to include backend error detail if present
+        
         try:
             detail = r.json().get("detail")
         except Exception:
@@ -66,7 +66,7 @@ def download_report(save_path: str) -> str:
     try:
         r.raise_for_status()
     except requests.RequestException as e:
-        # Try to surface backend error JSON if any
+       
         try:
             detail = r.json().get("detail")
         except Exception:
