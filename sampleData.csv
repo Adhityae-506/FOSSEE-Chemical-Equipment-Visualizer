@@ -1,6 +1,0 @@
-Equipment Name,Type,Flowrate,Pressure,Temperature
-Pump-3,Pump,125,5.3,115
-Condenser-1,Condenser,160,6.8,125
-Compressor-2,Compressor,100,8,98
-Valve-3,Valve,62,4.2,107
-Condenser-2,Condenser,165,6.9,128
