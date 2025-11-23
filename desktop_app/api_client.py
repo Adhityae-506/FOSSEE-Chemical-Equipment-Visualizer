@@ -2,8 +2,7 @@
 import requests
 
 # Same backend you use for React
-API_BASE = "http://127.0.0.1:8000/api"
-
+API_BASE = "https://fossee-chemical-equipment-visualizer.onrender.com"
 
 class ApiError(Exception):
     pass
