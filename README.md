@@ -1,4 +1,4 @@
-🧪 Chemical Equipment Parameter Visualizer  
+# Chemical Equipment parameter visualizer
 Hybrid Web + Desktop Application
 
 This project is part of the FOSSEE Internship Screening Task.  
@@ -83,5 +83,6 @@ Desktop
 🙌 Contributions  
 Made by: **Adhitya Elangovan**  
 For **FOSSEE IIT-Bombay Internship Screening**
+
 
 
