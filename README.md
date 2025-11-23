@@ -155,6 +155,30 @@ The packaged EXE is available at:
 desktop_app/dist/
 ```
 
+
+## 📂 Test Data — Sample CSV (Required for Testing)
+
+This project includes a sample dataset required to test all features of the **Web** and **Desktop** applications.
+
+### Location
+```bash
+sample_equipment_data.csv
+```
+
+This CSV file contains chemical equipment data and is used to test:
+
+- Uploading datasets  
+- Summary API  
+- Charts (bar + pie)  
+- Recent upload history  
+- PDF report generation  
+- Desktop app upload workflow  
+
+📌 **Evaluators can use this CSV while testing the project.**  
+Upload it through either interface (React Web App or PyQt5 Desktop App) to validate the entire pipeline.
+
+
+
 📊 PDF Report Includes  
 - Title & metadata  
 - Summary statistics table  
@@ -202,6 +226,7 @@ Desktop
 🙌 Contributions  
 Made by: **Adhitya E**  
 For **FOSSEE IIT-Bombay Internship Screening**
+
 
 
 
