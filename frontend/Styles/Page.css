@@ -1,0 +1,31 @@
+/* === Global Page Layout Fixes for all pages === */
+
+.page {
+  max-width: 1200px;
+  margin: 120px auto 60px; /* pushes every page below the navbar */
+  padding: 20px;
+}
+
+/* Full background consistency */
+body {
+  background: #fff5eb !important;
+}
+
+/* Fix for extra-long pages (History) */
+.page-fill {
+  min-height: calc(100vh - 120px);
+}
+
+/* Improve heading spacing */
+.page h2 {
+  margin-bottom: 18px;
+}
+
+/* Fix white background break in long pages */
+.page ul, 
+.page pre {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(255, 81, 47, 0.1);
+}

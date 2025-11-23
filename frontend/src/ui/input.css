@@ -1,0 +1,79 @@
+/* .ui-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  transition: 0.2s;
+}
+
+.ui-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.35);
+} */
+/* src/ui/input.css */
+/* .ui-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+  margin-bottom: 14px;
+  border: 1px solid rgba(30,30,30,0.04);
+}
+
+.ui-input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b6cb0;
+  font-size: 18px;
+  width: 36px;
+}
+
+.ui-input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  flex: 1;
+  background: transparent;
+  padding: 8px 6px;
+  color: #0b2840;
+} */
+
+
+/* src/ui/input.css */
+.ui-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  padding: 8px 12px;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+  margin-bottom: 14px;
+  border: 1px solid rgba(30,30,30,0.04);
+}
+
+.ui-input-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2b6cb0;
+  font-size: 18px;
+  width: 36px;
+}
+
+.ui-input {
+  border: none;
+  outline: none;
+  font-size: 15px;
+  flex: 1;
+  background: transparent;
+  padding: 8px 6px;
+  color: #0b2840;
+}

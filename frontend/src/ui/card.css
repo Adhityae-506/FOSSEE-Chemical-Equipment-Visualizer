@@ -1,0 +1,16 @@
+/* .ui-card {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin: 20px 0;
+} */
+/* src/ui/card.css */
+.ui-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(10,20,40,0.12);
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+}

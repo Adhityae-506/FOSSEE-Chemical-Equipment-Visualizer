@@ -1,0 +1,78 @@
+ /* .login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 40px;
+} 
+
+ */
+
+ /* Wrapper for the whole login page */
+.login-wrapper {
+  min-height: calc(100vh - 120px); /* works well with your #root padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  gap: 32px;
+}
+
+/* Top greeting text above the card */
+.login-text {
+  text-align: center;
+  max-width: 620px;
+}
+
+.login-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Card that holds the form */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Title inside the card */
+.login-title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Error text */
+.login-error {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #dc2626;
+}
+
+/* Stack inputs and button nicely */
+.login-card .ui-input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Make layout still nice on small screens */
+@media (max-width: 600px) {
+  .login-wrapper {
+    padding: 24px 12px;
+    min-height: calc(100vh - 80px);
+  }
+
+  .login-heading {
+    font-size: 22px;
+  }
+}
