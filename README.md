@@ -43,26 +43,6 @@ Component | Link
 - Page 2 → First 30 rows of CSV  
 - Clean and professional styling  
 
-📁 Project Structure
-FOSSEE-Chemical-Equipment-Visualizer/
-│
-├── backend/ # Django API
-│ ├── api/
-│ ├── backend/
-│ ├── manage.py
-│ └── requirements.txt
-│
-├── react-frontend/ # React + Vite Web UI
-│ ├── src/
-│ ├── public/
-│ └── .env.production
-│
-└── desktop_app/ # PyQt5 Desktop App
-├── main.py
-├── api_client.py
-└── dist/ # EXE output
-
-
 💻 Desktop App (EXE) Usage  
 - Download the executable from /desktop_app/dist  
 - Double-click to open  
@@ -103,4 +83,5 @@ Desktop
 🙌 Contributions  
 Made by: **Adhitya Elangovan**  
 For **FOSSEE IIT-Bombay Internship Screening**
+
 
